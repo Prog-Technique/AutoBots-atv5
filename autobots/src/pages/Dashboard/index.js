@@ -32,24 +32,6 @@ export default function Dashboard(){
                     </tr>
 
                     <tr>
-                      <td data-label="Listagem">Serviços ou produtos mais consumidos por gênero</td>
-                      <td data-label="#">
-                        <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/ser_pro_genero`}>
-                          <FiArrowRight color="#fff" size={17}/>
-                        </Link>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td data-label="Listagem">Geral dos serviços ou produtos mais consumidos</td>
-                      <td data-label="#">
-                        <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/geral`}>
-                          <FiArrowRight color="#fff" size={17}/>
-                        </Link>
-                      </td>
-                    </tr>
-
-                    <tr>
                       <td data-label="Listagem">5 clientes que mais consumiram em valor</td>
                       <td data-label="#">
                         <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/5valor`}>

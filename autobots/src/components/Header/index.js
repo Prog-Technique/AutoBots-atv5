@@ -25,10 +25,6 @@ export default function Header(){
                 <FiArchive color="#fff" size={25}/> Produtos
             </Link>
 
-            <Link to="/servicos">
-                <FiClipboard color="#fff" size={25}/> Serviços
-            </Link>
-
             <Link to="/">
                 <FiLogOut color="#fff" size={25}/> Sair
             </Link>

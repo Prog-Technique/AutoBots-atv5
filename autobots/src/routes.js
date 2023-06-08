@@ -8,12 +8,7 @@ import Cliente from './pages/Editar/cliente';
 
 import Produtos from './pages/Produtos';
 import Produto from './pages/Editar/produto';
-
-import Servicos from './pages/Servicos';
-import Servico from './pages/Editar/servico';
-
 import AddProdutos from './pages/Add/produto';
-import AddServicos from './pages/Add/servico';
 
 import Genero from './pages/Listagens/genero';
 import CincoValor from './pages/Listagens/5valor';
@@ -31,12 +26,8 @@ export default function RoutesApp(){
       
       <Route exact path="/produtos" element={ <Produtos/> } />
       <Route exact path="/produtos/:id" element={ <Produto/> } />
-      
-      <Route exact path="/servicos" element={ <Servicos/> } />
-      <Route exact path="/servicos/:id" element={ <Servico/> } />
 
       <Route exact path="/adicionar_produtos/:id" element={ <AddProdutos/> } />
-      <Route exact path="/adicionar_servicos/:id" element={ <AddServicos/> } />
 
       <Route exact path="/genero" element={ <Genero/> } />
       <Route exact path="/5valor" element={ <CincoValor/> } />

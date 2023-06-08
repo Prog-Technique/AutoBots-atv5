@@ -1,9 +1,13 @@
-.forms label{
+.forms label {
     margin-bottom: 0.5em;
     font-size: 1.4em;
 }
 
-.add, .forms input, .forms select{
+#stepTitle {
+    margin-left: 14%;
+}
+
+.forms input, .forms select {
     margin-bottom: 1em;
     padding: 0.7em;
     border: none;
@@ -17,8 +21,8 @@
     color:black;
  }
 
-.forms input:hover, .forms select:hover{
-    box-shadow: 1px 1px 3px #a75c5f;
+.forms input:hover, .forms select:hover {
+    box-shadow: 1px 1px 3px #797ca1;
 }
 
 .buttons, .submit {
@@ -36,31 +40,35 @@
     margin-bottom: 1em;
 }
 
-.school{
+.plus{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
-.school input{
+.plus input{
     width: 500px;
 }
 
 .del{
-    width: 100px;
-    padding: 0.7em;
-    border: none;
-    border-radius: 5px;
-    border: 1px solid #8b8da5;
-    background-color: #fde5e6;
-    height: 2.7em ;
+    height: 35px;
+    width: 400px;
+    border: 0;
+    border-radius: 7px;
+    background-color: #d63439;
+    color: #fff;
+    font-size: 1.3em;
+    margin-bottom: 10px;
 }
 
-.school input + .del{
-    margin-left: 10px;
+.BackNext{
+    display: flex;
+    flex-direction: row;
+    margin-left: 4%;
+    gap: 1em;
 }
 
-.add{
-    background-color: #fde5e6;
+.BackNext button{
+    width: 150px;
 }
 
 p{
