@@ -2,8 +2,7 @@ import './header.css';
 import logo from '../../assets/logo.png';
 
 import { Link } from 'react-router-dom';
-import { MdPeopleOutline, MdAccountCircle } from "react-icons/md";
-import { FiHome, FiArchive, FiClipboard, FiLogOut } from "react-icons/fi";
+import { FiHome, FiPlus, FiArchive, FiClipboard, FiLogOut } from "react-icons/fi";
 
 export default function Header(){
 
@@ -17,8 +16,8 @@ export default function Header(){
                 <FiHome color="#fff" size={25}/> Início
             </Link>
 
-            <Link to="/clientes">
-                <MdPeopleOutline color="#fff" size={25}/> Cliente
+            <Link to="/cadastrar">
+                <FiPlus color="#fff" size={25}/> Cadastrar
             </Link>
 
             <Link to="/produtos">

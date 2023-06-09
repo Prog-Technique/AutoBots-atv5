@@ -45,7 +45,7 @@
 }
 
 .sidebar a:hover{
-    background-color: #797ca1;
+    background-color: #8b8da5;
     color: #fff;
 }
 
@@ -63,28 +63,30 @@
         width: 100%;
         height: auto;
         position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
     .sidebar a{
         float: left
     }
 
-    .sidebar div{
-        display: none;
+    .sidebar div {
+        padding: 10px 0;
+    }
+
+    .sidebar div img {
+        width: 50px;
+        padding-bottom: 0;
+        margin-right: 50px;
     }
 
     .sidebar a svg{
         display: none;
     }
-}
 
-@media screen and (max-width: 400px){
-    .sidebar a{
-        text-align: ceter;
-        float: none;
-    }
-
-    .sidebar a svg{
-        display: none;
+    .content {
+        padding: 1px 55px;
     }
 }

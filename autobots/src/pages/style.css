@@ -1,10 +1,14 @@
+.container {
+    width: 30vw;
+}
+
 .forms label {
     margin-bottom: 0.5em;
     font-size: 1.4em;
 }
 
 #stepTitle {
-    margin-left: 14%;
+    text-align: center;
 }
 
 .forms input, .forms select {
@@ -41,12 +45,7 @@
 }
 
 .plus{
-    display: flex;
-    flex-direction: column;
-}
-
-.plus input{
-    width: 500px;
+    text-align: end;
 }
 
 .del{
@@ -77,6 +76,27 @@ p{
     font-size: 1.5em;
 }
 
+.table-cadastro td {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.table-cadastro tr {
+    background-color: transparent;
+    border: 1px solid #EFEFEF;
+}
+
+.cadastrar {
+    background-color: #797ca1;
+    padding: 15px 0;
+    border-radius: 7px;
+    color: #fff;
+    margin: 5px 0;
+}
+
 table{
     border: 1px solid #ccc;
     border-collapse: collapse;
@@ -98,8 +118,7 @@ table tr{
     padding: .35em;
 }
 
-table th, 
-table td{
+table th, table td{
     padding: 0.62em;
     text-align: center;
 }
