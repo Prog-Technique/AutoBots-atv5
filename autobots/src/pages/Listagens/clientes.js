@@ -57,7 +57,7 @@ export default function TodosClientes(){
             </tr>
           </thead>
           <tbody>
-            {ocorrencia.map((item, index)=>{
+            {/* {ocorrencia.map((item, index)=>{
               return(
                 <tr key={index}>
                   <td data-label="Cliente cadastrado">{item.nomeCliente}</td>
@@ -76,7 +76,28 @@ export default function TodosClientes(){
                   </td>
                 </tr>
               )
-            })}            
+            })}   */}
+
+            {/* {ocorrencia.map((item, index)=>{ 
+              return(*/}
+                <tr>
+                  <td data-label="Cliente cadastrado">Amanda Caires Pereira</td>
+                  <td data-label="Ações">
+                    <button className="action" style={{backgroundColor: '#3583f6'}} onClick={ () => togglePostModal() }>
+                        <FiSearch color="#fff" size={17}/>
+                    </button>
+
+                    <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/clientes`}>
+                      <FiEdit3 color="#fff" size={17}/>
+                    </Link>
+
+                    <button className="action" style={{backgroundColor: '#f00'}} onClick={ () => excluirCliente() }>
+                        <FiX color="#fff" size={17}/>
+                    </button>
+                  </td>
+                </tr>
+             {/* )
+             })}             */}          
           </tbody>
         </table>
         
