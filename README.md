@@ -3,6 +3,8 @@
 <h1> AutoBots </h1>
 <h3> Sistema para gestão de lojas especializadas em manutenção veicular e vendas de autopeças </h3>
 
+![autobot](https://github.com/Prog-Technique/AutoBots-atv5/assets/100284976/14d401fd-9c91-45da-8163-1ed98727afc2)
+
 </div>
 <br>
 
@@ -29,10 +31,13 @@ API é o acrônimo de Application Programming Interface (interface de programaç
 
 A melhor forma de disponibilizar as informações desejadas é através de APIs. Serão APIs RESTFull, protegidas por autenticação e autorização com JWT. Cada API corresponde a um micro-serviço único e dependendo do que cada uma fornece, elas podem se comunicar e trocar dados entre si para compor suas respostas.
 
+<br>
+
+## 🎯 Objetivo
 As APIs entregam as seguintes informações:
-- Lista de todos os clientes cadastrados por empresa(loja), com suas informações completas (documentos, telefones, endereço etc.)
+- Lista de todos os clientes cadastrados por empresa (loja), com suas informações completas (documentos, telefones, endereço etc.)
 - Lista de todos os funcionários cadastrados por empresa, com suas informações completas
-- Lista de serviços e mercadorias disponíveis para venda por empresa. Informações completas com data de cadastro, nome, descrição, valor etc.
+- Lista de serviços e mercadorias disponíveis para venda por empresa.
 - Lista de todos os serviços ou peças vendidas por empresa para um determinado período
 - Lista de todos os veículos atendidos por empresa
 
@@ -46,7 +51,31 @@ Clone o repositório pelo link:
 https://github.com/Prog-Technique/AutoBots-atv5.git
 ~~~
 
-e rode o AutomanagerApplication.java
+<br>
+
+PARA O BACK-END:
+
+- Abra a pasta automanager no Eclipse
+
+- Rode o AutomanagerApplication.java
+
+<br>
+
+PARA O FRONT-END:
+
+~~~
+cd autobots
+~~~
+
+~~~
+npm install
+~~~
+
+~~~
+npm start
+~~~
+
+E será aberto automaticamente no navegador.
 
 <br>
 
