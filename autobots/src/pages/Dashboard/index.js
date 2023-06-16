@@ -43,7 +43,7 @@ export default function Dashboard(){
                     <tr>
                       <td data-label="Listagem">Veículos</td>
                       <td data-label="#">
-                        <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/listagem_clientes`}>
+                        <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/z`}>
                           <FiArrowRight color="#fff" size={17}/>
                         </Link>
                       </td>
