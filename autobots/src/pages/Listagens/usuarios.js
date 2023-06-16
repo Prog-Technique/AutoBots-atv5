@@ -10,7 +10,7 @@ import ModalDetalhes from '../../components/ModalDetalhes/cliente';
 import { MdPeopleOutline } from "react-icons/md";
 import { FiX, FiSearch, FiEdit3 } from "react-icons/fi";
 
-export default function TodasEmpresas(){
+export default function TodosUsuarios(){
   const [ocorrencia, setOcorrencia] = useState([]);
     
   const [showPostModal, setShowPostModal] = useState(false);
@@ -20,15 +20,15 @@ export default function TodasEmpresas(){
 
   useEffect(()=> {
 
-    async function loadEmpresas(){
+    async function loadUsuarios(){
 
     }
 
-    loadEmpresas();
+    loadUsuarios();
     
   }, []);
 
-  async function excluirEmpresa(id){
+  async function excluirUsuario(id){
 
   }
 
@@ -42,7 +42,7 @@ export default function TodasEmpresas(){
       <Header/>
 
       <div className="content">
-        <Title name="Listagem das Empresas">
+        <Title name="Listagem dos Usuários">
           <MdPeopleOutline color="#8b8da5" size={25}/>
         </Title>          
 
@@ -51,48 +51,53 @@ export default function TodasEmpresas(){
         <table>
           <thead>
             <tr>
-              <th scope="col">Empresa cadastrada</th>
+              <th scope="col">Usuário cadastrado</th>
               <th scope="col">Ações</th>
+              
             </tr>
           </thead>
           <tbody>
-                <tr>
-                  <td data-label="Empresa cadastrada">McQueen Automotiva</td>
-                  <td data-label="Ações">
-                    <button className="action" style={{backgroundColor: '#3583f6'}} onClick={ () => togglePostModal() }>
-                        <FiSearch color="#fff" size={17}/>
-                    </button>
-
-                    <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/empresa`}>
-                      <FiEdit3 color="#fff" size={17}/>
-                    </Link>
-
-                    <button className="action" style={{backgroundColor: '#f00'}} onClick={ () => excluirEmpresa() }>
-                        <FiX color="#fff" size={17}/>
-                    </button>
-                  </td>
-                </tr>
-
             {/* {ocorrencia.map((item, index)=>{
               return(
                 <tr key={index}>
-                  <td data-label="Empresa cadastrada">{item.nomeempresa}</td>
+                  <td data-label="Cliente cadastrado">{item.nomeCliente}</td>
                   <td data-label="Ações">
                     <button className="action" style={{backgroundColor: '#3583f6'}} onClick={ () => togglePostModal(item) }>
                         <FiSearch color="#fff" size={17}/>
                     </button>
 
-                    <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/empresas/${item.id}`}>
+                    <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/Usuarios/${item.id}`}>
                       <FiEdit3 color="#fff" size={17}/>
                     </Link>
 
-                    <button className="action" style={{backgroundColor: '#f00'}} onClick={ () => excluirEmpresa(item.id) }>
+                    <button className="action" style={{backgroundColor: '#f00'}} onClick={ () => excluirUsuario(item.id) }>
                         <FiX color="#fff" size={17}/>
                     </button>
                   </td>
                 </tr>
               )
-            })}                      */}
+            })}   */}
+
+            {/* {ocorrencia.map((item, index)=>{ 
+              return(*/}
+                <tr>
+                  <td data-label="Usuário cadastrado">Amanda Caires Pereira</td>
+                  <td data-label="Ações">
+                    <button className="action" style={{backgroundColor: '#3583f6'}} onClick={ () => togglePostModal() }>
+                        <FiSearch color="#fff" size={17}/>
+                    </button>
+
+                    <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/cliente`}>
+                      <FiEdit3 color="#fff" size={17}/>
+                    </Link>
+
+                    <button className="action" style={{backgroundColor: '#f00'}} onClick={ () => excluirUsuario() }>
+                        <FiX color="#fff" size={17}/>
+                    </button>
+                  </td>
+                </tr>
+             {/* )
+             })}             */}          
           </tbody>
         </table>
         

@@ -8,9 +8,9 @@ import Title from '../../components/Title';
 import ModalDetalhes from '../../components/ModalDetalhes/cliente';
 
 import { MdPeopleOutline } from "react-icons/md";
-import { FiArchive, FiX, FiSearch, FiEdit3 } from "react-icons/fi";
+import { FiX, FiSearch, FiEdit3 } from "react-icons/fi";
 
-export default function TodosClientes(){
+export default function TodasMercadorias(){
   const [ocorrencia, setOcorrencia] = useState([]);
     
   const [showPostModal, setShowPostModal] = useState(false);
@@ -51,7 +51,7 @@ export default function TodosClientes(){
         <table>
           <thead>
             <tr>
-              <th scope="col">Cliente cadastrado</th>
+              <th scope="col">Mercadoria cadastrada</th>
               <th scope="col">Ações</th>
               
             </tr>
@@ -81,13 +81,13 @@ export default function TodosClientes(){
             {/* {ocorrencia.map((item, index)=>{ 
               return(*/}
                 <tr>
-                  <td data-label="Cliente cadastrado">Amanda Caires Pereira</td>
+                  <td data-label="Mercadoria cadastrada">Lanterna 571-93 | Renault</td>
                   <td data-label="Ações">
                     <button className="action" style={{backgroundColor: '#3583f6'}} onClick={ () => togglePostModal() }>
                         <FiSearch color="#fff" size={17}/>
                     </button>
 
-                    <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/clientes`}>
+                    <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/mercadoria`}>
                       <FiEdit3 color="#fff" size={17}/>
                     </Link>
 

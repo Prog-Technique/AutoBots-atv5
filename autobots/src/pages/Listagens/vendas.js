@@ -8,9 +8,9 @@ import Title from '../../components/Title';
 import ModalDetalhes from '../../components/ModalDetalhes/cliente';
 
 import { MdPeopleOutline } from "react-icons/md";
-import { FiX, FiSearch, FiEdit3 } from "react-icons/fi";
+import { FiX, FiEdit3 } from "react-icons/fi";
 
-export default function TodasEmpresas(){
+export default function TodasVendas(){
   const [ocorrencia, setOcorrencia] = useState([]);
     
   const [showPostModal, setShowPostModal] = useState(false);
@@ -20,15 +20,15 @@ export default function TodasEmpresas(){
 
   useEffect(()=> {
 
-    async function loadEmpresas(){
+    async function loadVendas(){
 
     }
 
-    loadEmpresas();
+    loadVendas();
     
   }, []);
 
-  async function excluirEmpresa(id){
+  async function excluirVenda(id){
 
   }
 
@@ -42,7 +42,7 @@ export default function TodasEmpresas(){
       <Header/>
 
       <div className="content">
-        <Title name="Listagem das Empresas">
+        <Title name="Listagem das Vendas">
           <MdPeopleOutline color="#8b8da5" size={25}/>
         </Title>          
 
@@ -51,23 +51,25 @@ export default function TodasEmpresas(){
         <table>
           <thead>
             <tr>
-              <th scope="col">Empresa cadastrada</th>
+              <th scope="col">Data de cadastro</th>
+              <th scope="col">Identificação</th>
+              <th scope="col">Nome do cliente</th>
+              <th scope="col">Nome do funcionário</th>
               <th scope="col">Ações</th>
             </tr>
           </thead>
           <tbody>
                 <tr>
-                  <td data-label="Empresa cadastrada">McQueen Automotiva</td>
+                <td data-label="Data de cadastro">02/05/2023</td>
+                <td data-label="Identificação">1234567891</td>
+                <td data-label="Nome do cliente">Amanda Caires Pereira</td>
+                <td data-label="Nome do funcionário">Marcos Paulo Braga Poca</td>
                   <td data-label="Ações">
-                    <button className="action" style={{backgroundColor: '#3583f6'}} onClick={ () => togglePostModal() }>
-                        <FiSearch color="#fff" size={17}/>
-                    </button>
-
-                    <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/empresa`}>
+                    <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/venda`}>
                       <FiEdit3 color="#fff" size={17}/>
                     </Link>
 
-                    <button className="action" style={{backgroundColor: '#f00'}} onClick={ () => excluirEmpresa() }>
+                    <button className="action" style={{backgroundColor: '#f00'}} onClick={ () => excluirVenda() }>
                         <FiX color="#fff" size={17}/>
                     </button>
                   </td>
@@ -76,17 +78,17 @@ export default function TodasEmpresas(){
             {/* {ocorrencia.map((item, index)=>{
               return(
                 <tr key={index}>
-                  <td data-label="Empresa cadastrada">{item.nomeempresa}</td>
+                  <td data-label="Venda cadastrada">{item.nomeVenda}</td>
                   <td data-label="Ações">
                     <button className="action" style={{backgroundColor: '#3583f6'}} onClick={ () => togglePostModal(item) }>
                         <FiSearch color="#fff" size={17}/>
                     </button>
 
-                    <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/empresas/${item.id}`}>
+                    <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/Vendas/${item.id}`}>
                       <FiEdit3 color="#fff" size={17}/>
                     </Link>
 
-                    <button className="action" style={{backgroundColor: '#f00'}} onClick={ () => excluirEmpresa(item.id) }>
+                    <button className="action" style={{backgroundColor: '#f00'}} onClick={ () => excluirVenda(item.id) }>
                         <FiX color="#fff" size={17}/>
                     </button>
                   </td>

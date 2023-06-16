@@ -8,9 +8,9 @@ import Title from '../../components/Title';
 import ModalDetalhes from '../../components/ModalDetalhes/cliente';
 
 import { MdPeopleOutline } from "react-icons/md";
-import { FiX, FiSearch, FiEdit3 } from "react-icons/fi";
+import { FiX, FiEdit3 } from "react-icons/fi";
 
-export default function TodasEmpresas(){
+export default function TodosServicos(){
   const [ocorrencia, setOcorrencia] = useState([]);
     
   const [showPostModal, setShowPostModal] = useState(false);
@@ -20,15 +20,15 @@ export default function TodasEmpresas(){
 
   useEffect(()=> {
 
-    async function loadEmpresas(){
+    async function loadServicos(){
 
     }
 
-    loadEmpresas();
+    loadServicos();
     
   }, []);
 
-  async function excluirEmpresa(id){
+  async function excluirServico(id){
 
   }
 
@@ -42,7 +42,7 @@ export default function TodasEmpresas(){
       <Header/>
 
       <div className="content">
-        <Title name="Listagem das Empresas">
+        <Title name="Listagem dos Serviços">
           <MdPeopleOutline color="#8b8da5" size={25}/>
         </Title>          
 
@@ -51,23 +51,40 @@ export default function TodasEmpresas(){
         <table>
           <thead>
             <tr>
-              <th scope="col">Empresa cadastrada</th>
+              <th scope="col">Serviço cadastrado</th>
+              <th scope="col">Valor</th>
+              <th scope="col">Descrição</th>
               <th scope="col">Ações</th>
             </tr>
           </thead>
           <tbody>
                 <tr>
-                  <td data-label="Empresa cadastrada">McQueen Automotiva</td>
+                  <td data-label="Serviço cadastrado">Adição do parafuso com segredo</td>
+                  <td data-label="Valor">R$ 30,00</td>
+                  <td data-label="Descrição">Troca de 1 parafuso normal de cada roda</td>
                   <td data-label="Ações">
-                    <button className="action" style={{backgroundColor: '#3583f6'}} onClick={ () => togglePostModal() }>
-                        <FiSearch color="#fff" size={17}/>
-                    </button>
 
-                    <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/empresa`}>
+                    <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/servico`}>
                       <FiEdit3 color="#fff" size={17}/>
                     </Link>
 
-                    <button className="action" style={{backgroundColor: '#f00'}} onClick={ () => excluirEmpresa() }>
+                    <button className="action" style={{backgroundColor: '#f00'}} onClick={ () => excluirServico() }>
+                        <FiX color="#fff" size={17}/>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td data-label="Serviço cadastrado">Alinhamento básico</td>
+                  <td data-label="Valor">R$ 124,99</td>
+                  <td data-label="Descrição">Alinhamento de rodas de veículo - pequeno porte</td>
+                  <td data-label="Ações">
+
+                    <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/servico`}>
+                      <FiEdit3 color="#fff" size={17}/>
+                    </Link>
+
+                    <button className="action" style={{backgroundColor: '#f00'}} onClick={ () => excluirServico() }>
                         <FiX color="#fff" size={17}/>
                     </button>
                   </td>
@@ -76,17 +93,17 @@ export default function TodasEmpresas(){
             {/* {ocorrencia.map((item, index)=>{
               return(
                 <tr key={index}>
-                  <td data-label="Empresa cadastrada">{item.nomeempresa}</td>
+                  <td data-label="Servico cadastrada">{item.nomeServico}</td>
                   <td data-label="Ações">
                     <button className="action" style={{backgroundColor: '#3583f6'}} onClick={ () => togglePostModal(item) }>
                         <FiSearch color="#fff" size={17}/>
                     </button>
 
-                    <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/empresas/${item.id}`}>
+                    <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/Servicos/${item.id}`}>
                       <FiEdit3 color="#fff" size={17}/>
                     </Link>
 
-                    <button className="action" style={{backgroundColor: '#f00'}} onClick={ () => excluirEmpresa(item.id) }>
+                    <button className="action" style={{backgroundColor: '#f00'}} onClick={ () => excluirServico(item.id) }>
                         <FiX color="#fff" size={17}/>
                     </button>
                   </td>

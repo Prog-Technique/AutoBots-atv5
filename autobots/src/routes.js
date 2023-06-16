@@ -3,36 +3,31 @@ import { Routes, Route } from 'react-router-dom';
 import SignIn from './pages/SignIn';
 import Dashboard from './pages/Dashboard';
 
-import Cadastrar from './pages/Cadastro';
-
-import CadastrarCliente from './pages/Cadastro/Cliente';
+import CadastrarCliente from './pages/Cadastro/Usuario';
 import Cliente from './pages/Editar/cliente';
-import TodosClientes from './pages/Listagens/clientes';
+import TodosClientes from './pages/Listagens/usuarios';
 
 import CadastrarEmpresa from './pages/Cadastro/Empresa';
 import TodasEmpresas from './pages/Listagens/empresas';
 
 import CadastrarVeiculo from './pages/Cadastro/Veiculo';
+import TodosVeiculos from './pages/Listagens/veiculos';
 
 import CadastrarServico from './pages/Cadastro/Servico';
+import TodosServicos from './pages/Listagens/servicos';
 
 import CadastrarMercadoria from './pages/Cadastro/Mercadoria';
+import TodasMercadorias from './pages/Listagens/mercadorias';
 
 import CadastrarVenda from './pages/Cadastro/Venda';
+import TodasVendas from './pages/Listagens/vendas';
 
-import Produtos from './pages/Produtos';
-import Produto from './pages/Editar/produto';
-import AddProdutos from './pages/Add/produto';
-
-import CincoValor from './pages/Listagens/5valor';
 
 export default function RoutesApp(){
   return(
     <Routes>
       <Route exact path="/" element={ <SignIn/> } />
       <Route exact path="/dashboard" element={ <Dashboard/> } />
-      
-      <Route exact path="/cadastrar" element={ <Cadastrar/> } />
       
       <Route exact path="/cliente" element={ <CadastrarCliente/> } />
       <Route exact path="/clientes/:id" element={ <Cliente/> } />
@@ -42,19 +37,16 @@ export default function RoutesApp(){
       <Route exact path="/listagem_empresas" element={ <TodasEmpresas/> } />
       
       <Route exact path="/veiculo" element={ <CadastrarVeiculo/> } />
+      <Route exact path="/listagem_veiculos" element={ <TodosVeiculos/> } />
       
       <Route exact path="/servico" element={ <CadastrarServico/> } />
+      <Route exact path="/listagem_servicos" element={ <TodosServicos/> } />
 
       <Route exact path="/mercadoria" element={ <CadastrarMercadoria/> } />
+      <Route exact path="/listagem_mercadorias" element={ <TodasMercadorias/> } />
 
       <Route exact path="/venda" element={ <CadastrarVenda/> } />
-
-      <Route exact path="/produtos" element={ <Produtos/> } />
-      <Route exact path="/produtos/:id" element={ <Produto/> } />
-
-      <Route exact path="/adicionar_produtos/:id" element={ <AddProdutos/> } />
-
-      <Route exact path="/5valor" element={ <CincoValor/> } />
+      <Route exact path="/listagem_vendas" element={ <TodasVendas/> } />
     
     </Routes>
   )

@@ -55,6 +55,14 @@
     padding: 1px 16px;
 }
 
+.service{
+    display: none;
+}
+
+.logOut{
+    margin-top: 50%;
+}
+
 @media screen and (max-width: 700px){
     div.content{
         margin-left: 0;
@@ -66,7 +74,7 @@
         position: relative;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
     }
 
     .sidebar a{
@@ -80,11 +88,31 @@
     .sidebar div img {
         width: 50px;
         padding-bottom: 0;
-        margin-right: 50px;
     }
 
-    .sidebar a svg{
+    .sidebar .normal a svg{
         display: none;
+    }
+
+    .service{
+        display: block;
+        position: relative;
+    }
+
+    .dropdown {
+       display: none;
+    }
+    
+    .service:hover .dropdown {
+        display: block;
+    }
+
+    .normal{
+        display: none;
+    }
+
+    .logOut{
+        margin-top: 0;
     }
 
     .content {

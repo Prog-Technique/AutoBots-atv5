@@ -23,7 +23,7 @@ export default function Dashboard(){
               </thead>
               <tbody>
                     <tr>
-                      <td data-label="Listagem">Clientes</td>
+                      <td data-label="Listagem">Usuários</td>
                       <td data-label="#">
                         <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/listagem_clientes`}>
                           <FiArrowRight color="#fff" size={17}/>
@@ -43,7 +43,7 @@ export default function Dashboard(){
                     <tr>
                       <td data-label="Listagem">Veículos</td>
                       <td data-label="#">
-                        <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/z`}>
+                        <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/listagem_veiculos`}>
                           <FiArrowRight color="#fff" size={17}/>
                         </Link>
                       </td>
@@ -52,7 +52,7 @@ export default function Dashboard(){
                     <tr>
                       <td data-label="Listagem">Serviços</td>
                       <td data-label="#">
-                        <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/listagem_empresas`}>
+                        <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/listagem_servicos`}>
                           <FiArrowRight color="#fff" size={17}/>
                         </Link>
                       </td>
@@ -61,7 +61,7 @@ export default function Dashboard(){
                     <tr>
                       <td data-label="Listagem">Mercadorias</td>
                       <td data-label="#">
-                        <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/listagem_empresas`}>
+                        <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/listagem_mercadorias`}>
                           <FiArrowRight color="#fff" size={17}/>
                         </Link>
                       </td>
@@ -70,16 +70,7 @@ export default function Dashboard(){
                     <tr>
                       <td data-label="Listagem">Vendas</td>
                       <td data-label="#">
-                        <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/listagem_empresas`}>
-                          <FiArrowRight color="#fff" size={17}/>
-                        </Link>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td data-label="Listagem">5 - exemplo</td>
-                      <td data-label="#">
-                        <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/5valor`}>
+                        <Link className="action" style={{backgroundColor: '#F6a935'}} to={`/listagem_vendas`}>
                           <FiArrowRight color="#fff" size={17}/>
                         </Link>
                       </td>

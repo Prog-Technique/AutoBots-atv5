@@ -40,7 +40,7 @@ export default function CadastrarTitular() {
     <div>
       <Header />
       <div className="content">
-        <Title name="Cliente">
+        <Title name="Usuário">
           <MdPeopleOutline color="#8b8da5" size={25}/>
         </Title>
 
